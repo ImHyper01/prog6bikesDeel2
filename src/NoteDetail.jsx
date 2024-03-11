@@ -18,28 +18,18 @@ export function NoteDetail() {
             .then((response) => response.json())
             .then((result) => setNote(result))
             .catch(error => console.log("ERROR: " + error))
+
     }
 
     useEffect(() => {
         loadNotes()
     }, []);
 
-    // return <section>
-    //     <h1>{note && note.title}</h1>
-    //     <h2>By: {note && note.author}</h2>
-    //     <p>{note && note.body}</p>
-    // </section>
-
-    console.log(note)
-
     return <section>
-
-        <header>
-            <h1>Note details</h1>
-            <p>{note?.title}</p>
-            <p>{note?.body}</p>
-            <p>{note?.author}</p>
-        </header>
+        <h1>Title: {note && note.title}</h1>
+        <h2>By: {note && note.author}</h2>
+        <p>Description: {note && note.body}</p>
     </section>
+
 
 }

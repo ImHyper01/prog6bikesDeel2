@@ -39,7 +39,7 @@ export function App() {
             <Route path="/" element={<Layout/>}>
                 <Route index element={showNotes} />
                 <Route path="create" element={<NewNote notesRefreshHandler={loadNotes} />}/>
-                <Route path="notes./:id" element={<NoteDetail />} />
+                <Route path="notes/:id" element={<NoteDetail />} />
                 <Route path="*" element={<Error />} />
             </Route>
         </Routes>

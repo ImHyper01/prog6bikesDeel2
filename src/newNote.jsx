@@ -36,8 +36,8 @@ export function NewNote(props) {
         <h2>New Note</h2>
         <form>
             <input type="text" value={note.title} name="title" onChange={onChangeHandler}/><br/>
-            <input type="text" value={note.body} name="body" onChange={onChangeHandler}/><br/>
             <input type="text" value={note.author} name="author" onChange={onChangeHandler}/><br/>
+            <input type="text" value={note.body} name="body" onChange={onChangeHandler}/><br/>
             <button onClick={saveNote}>SAVE NOTE</button>
         </form>
     </section>;
